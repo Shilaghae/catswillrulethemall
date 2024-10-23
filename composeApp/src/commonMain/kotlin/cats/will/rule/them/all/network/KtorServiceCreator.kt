@@ -1,14 +1,14 @@
 package cats.will.rule.them.all.network
 
-import cats.will.rule.them.all.features.breeds.api.BreedService
-import cats.will.rule.them.all.features.breeds.api.createBreedService
+import cats.will.rule.them.all.features.landing.BreedService
+import cats.will.rule.them.all.features.landing.createBreedService
 import de.jensklingenberg.ktorfit.Ktorfit
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
-class KtorfitServiceCreator(url: String) {
+class KtorfitServiceCreator(val url: String) {
 
     private val httpClient = HttpClient {
         install(ContentNegotiation) {

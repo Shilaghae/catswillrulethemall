@@ -59,11 +59,6 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
-            //Pagination
-            implementation(libs.paging.compose.common)
-            implementation(libs.paging.common)
-            //Logger
-            implementation(libs.napier)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
@@ -95,10 +90,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
-    }
-    buildFeatures {
-        compose = true
-        buildConfig = true
     }
 }
 
