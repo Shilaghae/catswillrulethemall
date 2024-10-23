@@ -1,8 +1,9 @@
 package cats.will.rule.them.all.di
 
-import cats.will.rule.them.all.features.landing.BreedRepository
-import cats.will.rule.them.all.features.landing.BreedService
-import cats.will.rule.them.all.features.landing.LandingViewModel
+import cats.will.rule.them.all.features.breeds.data.BreedPagingSource
+import cats.will.rule.them.all.features.breeds.api.BreedRepository
+import cats.will.rule.them.all.features.breeds.api.BreedService
+import cats.will.rule.them.all.features.breeds.ui.BreedsViewModel
 import cats.will.rule.them.all.network.KtorfitServiceCreator
 import org.kodein.di.DI
 import org.kodein.di.bindProvider
@@ -23,11 +24,15 @@ object AppDI {
         bindProvider { BreedRepository(instance()) }
     }
     private val viewModelModule = DI.Module(name = "ViewModelModule") {
-        bindViewModel { LandingViewModel(instance()) }
+        bindViewModel { BreedsViewModel(instance()) }
+    }
+    private val breedSourcePaging = DI.Module(name = "BreedPagingSource") {
+        bindProvider { BreedPagingSource(instance()) }
     }
     val di = DI {
         import(apiModule)
         import(breedRepository)
         import(viewModelModule)
+        import(breedSourcePaging)
     }
 }

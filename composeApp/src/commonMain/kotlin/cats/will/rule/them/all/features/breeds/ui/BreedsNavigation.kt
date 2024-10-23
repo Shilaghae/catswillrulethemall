@@ -1,4 +1,4 @@
-package cats.will.rule.them.all.features.landing
+package cats.will.rule.them.all.features.breeds.ui
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
