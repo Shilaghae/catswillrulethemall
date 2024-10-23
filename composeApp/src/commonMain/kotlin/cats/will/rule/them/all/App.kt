@@ -7,8 +7,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import cats.will.rule.them.all.features.landing.LandingScreen
-import cats.will.rule.them.all.features.landing.goToLanding
+import cats.will.rule.them.all.features.breeds.ui.LandingScreen
+import cats.will.rule.them.all.features.breeds.ui.goToLanding
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import theming.CatsAppTheme
 
